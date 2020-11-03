@@ -1,12 +1,17 @@
 package com.ipiecoles.java.java230.model;
 
+import javax.persistence.*;
 import org.hibernate.annotations.Type;
 import org.joda.time.LocalDate;
 
 import java.util.Objects;
 
+
+@Entity
 public abstract class Employe {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	private String nom;
